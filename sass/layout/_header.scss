@@ -1,0 +1,40 @@
+.header-container {
+    width: 100%;
+    height: 200px;
+    background-color: #FFF7EF;
+    display: flex;
+    justify-content: space-between;
+    color: $text-gray;
+
+    .header-title {
+        width: 70%;
+        align-self: center;
+        margin-left: 20px;
+    }
+    .menu-btn {
+        display: none;
+    }
+    .searchbox {
+        width: 30%;
+        height: 30px;
+        display: inline-block;
+        align-self: center;
+        position: relative;
+
+        input[text] {
+            width: 70%;
+            height: 30px;
+        }
+
+        .search-btn {
+            color: $text-gray;
+            padding: 5px 10px;
+        }
+
+        .fa-search {
+            position: absolute;
+            top:8px;
+            left: 8px;
+        }
+    }
+}

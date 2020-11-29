@@ -1,0 +1,221 @@
+@charset "UTF-8";
+/* A Modern CSS Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  font-family: Roboto;
+  font-weight: 700;
+  color: #121212;
+}
+
+body {
+  font-family: Roboto;
+}
+
+/* ブレークポイント */
+.header-container {
+  width: 100%;
+  height: 200px;
+  background-color: #FFF7EF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #808080;
+}
+
+.header-container .header-title {
+  width: 70%;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  margin-left: 20px;
+}
+
+.header-container .menu-btn {
+  display: none;
+}
+
+.header-container .searchbox {
+  width: 30%;
+  height: 30px;
+  display: inline-block;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  position: relative;
+}
+
+.header-container .searchbox input[text] {
+  width: 70%;
+  height: 30px;
+}
+
+.header-container .searchbox .search-btn {
+  color: #808080;
+  padding: 5px 10px;
+}
+
+.header-container .searchbox .fa-search {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.l-Main-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  background-color: #F2EDE9;
+}
+
+.l-sidebar {
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 20vw;
+  background-color: #F2EDE9;
+  color: #707070;
+  padding-left: 20px;
+  font-weight: normal;
+}
+
+.l-sidebar .menu-title {
+  display: block;
+  width: 100%;
+  height: 200px;
+  line-height: 200px;
+  font-size: 1.5rem;
+}
+
+.l-sidebar .category-box h3 {
+  font-size: 1.2rem;
+}
+
+.l-sidebar .category-box ul {
+  padding: 20px 0;
+  padding-left: 10px;
+}
+
+.l-sidebar .category-box li {
+  font-size: 1rem;
+  line-height: 20px;
+  padding: 5px;
+}
+
+.l-sidebar .category-box .burger h3 {
+  font-size: 18px;
+}
+
+.l-sidebar .category-box .burger li {
+  font-size: 15px;
+}
+
+.close {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
