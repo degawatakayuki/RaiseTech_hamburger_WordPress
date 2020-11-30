@@ -16,24 +16,23 @@
     }
     .searchbox {
         width: 30%;
-        height: 30px;
+        height: 38px;
         display: inline-block;
         align-self: center;
         position: relative;
 
-        input[text] {
+        .search_input{
             width: 70%;
-            height: 30px;
+            height: 100%;
+            padding-left: 30px;
         }
-
         .search-btn {
             color: $text-gray;
             padding: 5px 10px;
         }
-
         .fa-search {
             position: absolute;
-            top:8px;
+            top:12px;
             left: 8px;
         }
     }

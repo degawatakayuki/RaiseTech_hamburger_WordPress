@@ -140,7 +140,7 @@ body {
 
 .header-container .searchbox {
   width: 30%;
-  height: 30px;
+  height: 38px;
   display: inline-block;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
@@ -149,9 +149,10 @@ body {
   position: relative;
 }
 
-.header-container .searchbox input[text] {
+.header-container .searchbox .search_input {
   width: 70%;
-  height: 30px;
+  height: 100%;
+  padding-left: 30px;
 }
 
 .header-container .searchbox .search-btn {
@@ -161,7 +162,7 @@ body {
 
 .header-container .searchbox .fa-search {
   position: absolute;
-  top: 8px;
+  top: 12px;
   left: 8px;
 }
 
