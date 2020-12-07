@@ -1,0 +1,25 @@
+.p-body-filter {
+    
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2520px;
+
+    @include breakpoint(tablet) {
+        height: 1550px;
+    }
+    @include breakpoint(pc) {
+        height: 2200px;
+    }
+
+    &.filter_open {
+        z-index: 1;
+        background-color: $bg-gray;
+        height: 3000px;
+    }
+
+    @include breakpoint(pc) {
+        z-index: -1;
+    }
+}

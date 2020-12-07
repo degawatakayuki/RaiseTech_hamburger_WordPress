@@ -1,43 +1,113 @@
 .l-sidebar {
+    display: none;
+    overflow: hidden;
     position: absolute;
     top: 0;
-    left: 80%;
-    width: 20vw;
-    background-color: $bg-color2;
+    left: 0%;
+    width: 100vw;
+    height: 2000px;
     color: $text-maincolor;
-    padding-left: 20px;;
     font-weight: normal;
+    z-index: 1;
+
+    @include breakpoint(pc) {
+        display: block;
+        height: 2200px;
+    }
+
+    &.menu-open {
+        display: block;
+    }
+
+    .slidebar-container {
+        position: relative;
+        top: 0;
+        left: 10%;
+        width: 90vw;
+        height: 100%;
+        padding-top: 200px;
+        padding-left: 2%;
+        background-color: $bg-color2;
+        z-index: 20;
+
+        @include breakpoint(tablet) {
+            width: 45vw;
+            left: 55%;
+        }
+
+        @include breakpoint(pc) {
+            width: 20vw;
+            left: 80%;
+            padding-top: 0;
+        }
+
+        .menu-btn_close {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+
+            @include breakpoint(pc) {
+                display: none;
+            }
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                color: $text-gray;
+                line-height: 1;
+                width: 30px;
+                height: 3px;
+                background: currentColor;
+                border-radius: 0.1em;
+                position: relative;
+                transform: rotate(45deg);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: inherit;
+                    border-radius: inherit;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
 
     .menu-title {
-        display: block;
+        display: none;
         width: 100%;
         height: 200px;
         line-height: 200px;
-        font-size: 1.5rem;
+        font-size: 3rem;
+
+        @include breakpoint(pc) {
+            display: block;
+        }
     }
 
     .category-box {
         
         h3 {
-            font-size: 1.2rem;
+            font-size: 2em;
         }
+
         ul {
             padding: 20px 0;
             padding-left: 10px;
         }
+        
         li {
-            font-size: 1rem;
+            font-size: 1.6rem;
             line-height: 20px;
-            padding: 5px;
+            padding: 8px;
         }
-        .burger {
-            h3 {
-                font-size: 18px;
-            }
-            li {
-                font-size: 15px;
-            }
-        }
-
     }
 }

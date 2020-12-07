@@ -2,6 +2,13 @@
     position: absolute;
     top:0;
     left: 0;
-    width: 80vw;
-    background-color: $bg-color2;
+    width: 100vw;
+    height: 100%;
+
+    @include breakpoint(tablet) {
+
+    }
+    @include breakpoint(pc) {
+        width: 80vw;
+    }
 } 

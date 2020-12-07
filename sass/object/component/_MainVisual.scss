@@ -1,0 +1,59 @@
+.c-MainVisual {
+    height: 300px;
+    width: 100%;
+    /* background-image: url(../img/mainvisual.jpg); */
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+    @include breakpoint(pc) {
+        background-size: cover;
+    }
+    @include breakpoint(pc) {
+        height: 500px;
+    }
+
+    .mainvisual-title {
+     
+        font-size: 3.6rem;
+        color: $text-white;
+        font-weight: normal;
+
+        @include breakpoint(tablet) {
+            top: 45%;
+            left: 10%;
+        }
+    }
+    p {
+        
+    }
+}
+
+/* .p-MainVisual {
+    height: 300px;
+    width: 100%;
+    background-image: url(../img/mainvisual.jpg);
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+    @include breakpoint(pc) {
+        background-size: cover;
+    }
+    @include breakpoint(pc) {
+        height: 500px;
+    }
+
+    .mainvisual-title {
+        display: block;
+        position: absolute;
+        top: 45%;
+        left: 5%;
+        font-size: 3.6rem;
+        color: $text-white;
+        font-weight: normal;
+
+        @include breakpoint(tablet) {
+            top: 45%;
+            left: 10%;
+        }
+    }
+} */

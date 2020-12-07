@@ -2,13 +2,19 @@ $main-color: #2498B3;
 
 $bg-color1: #FFF7EF;
 $bg-color2: #F2EDE9;
+$bg-gray: #707070;
+$bg-white: #ffffff;
+$bg-black: #000;
+$bg-footer: #9D8670;
 
 $text-maincolor: #707070;
 $text-gray: #808080;
 $text-black: #000;
 $text-white: #fff;
+$text-brown: #3C2A10;
 
 
 /* ブレークポイント */
-$md-breakpoint: 768px;
-$pc-breakpoint: 1200px;
+$md-breakpoint: 641px;
+$pc-breakpoint: 769px;
+$wd-breakpoint: 961px;

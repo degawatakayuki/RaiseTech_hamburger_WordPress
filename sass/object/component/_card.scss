@@ -1,0 +1,42 @@
+.c-mainContent-card {
+    height: 600px;
+    background-size: cover;
+    color: $text-white;
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+
+    @include breakpoint(pc) {
+        height: 1000px;
+    }
+
+    h2 {
+        font-size: 4.8rem;
+        flex-grow: 3;
+    }
+
+    .content {
+        display: block;
+        justify-self: end;
+        background-color: $bg-white;
+        color: $text-brown;
+        padding: 10px;
+        opacity: 0.8;
+        font-weight: normal; 
+
+        h3 {
+            font-size: 2.2rem;
+            font-weight: normal; 
+            margin: 15px 0;
+        }
+        p {
+            font-size: 1.4rem;
+            padding-bottom: 20px;
+            line-height: 1.4;
+            letter-spacing: -0.1rem;
+        }
+    }
+    .content:first-of-type {
+        margin-bottom: 10px;
+    }
+}

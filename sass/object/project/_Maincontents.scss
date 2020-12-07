@@ -1,0 +1,52 @@
+.p-Maincontents {
+    height: 1320px;
+    width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 30px 0 50px 0;
+
+    @include breakpoint(tablet) {
+        height: 660px;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    @include breakpoint(pc) {
+        width: 80vw;
+        height: 1100px;
+    }
+
+    .takeOut {
+        max-width: 100%;
+        background-image: url(../img/takeOut.jpg);
+        margin-bottom: 10px;
+
+        @include breakpoint(tablet) {
+            max-width: 45%;
+
+            h2::after {
+                display: block;
+                content: "";
+                width: 40px;
+                border: 2px solid;
+                margin-top: 10px;
+            }
+        }
+    }
+    .eatIn {
+        max-width: 100%;
+        background-image: url(../img/eatin.jpg);
+
+        @include breakpoint(tablet) {
+            max-width: 45%;
+        }
+        
+        h2::after {
+            display: block;
+            content: "";
+            width: 40px;
+            border: 2px solid;
+            margin-top: 10px;
+        }
+    }
+}
