@@ -456,31 +456,59 @@ body {
 }
 
 .c-MainVisual {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+  -webkit-align-items: left;
+      -ms-flex-align: left;
+          align-items: left;
   height: 300px;
   width: 100%;
-  /* background-image: url(../img/mainvisual.jpg); */
   background-position: center;
   background-size: 100%;
+  padding-left: 50px;
   position: relative;
+  z-index: -1;
+}
+
+@media (min-width: 641px) {
+  .c-MainVisual {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: left;
+    -webkit-justify-content: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: -1;
+  }
 }
 
 @media (min-width: 769px) {
   .c-MainVisual {
     background-size: cover;
-  }
-}
-
-@media (min-width: 769px) {
-  .c-MainVisual {
-    height: 500px;
+    height: 250px;
   }
 }
 
 .c-MainVisual .mainvisual-title {
-  display: block;
-  position: absolute;
-  top: 45%;
-  left: 5%;
   font-size: 3.6rem;
   color: #fff;
   font-weight: normal;
@@ -488,9 +516,70 @@ body {
 
 @media (min-width: 641px) {
   .c-MainVisual .mainvisual-title {
-    top: 45%;
-    left: 10%;
+    font-size: 4.8rem;
   }
+}
+
+.c-MainVisual p {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+@media (min-width: 641px) {
+  .c-MainVisual p {
+    font-size: 1.8rem;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+}
+
+.c-item-box {
+  width: 90vw;
+  margin: 0 auto;
+  background-color: #3C2A10;
+  color: #fff;
+  font-weight: normal;
+}
+
+.c-item-box .item-img {
+  width: 100%;
+  height: 230px;
+  background-image: url(../img/cheeseburger.jpg);
+  background-position: top 20% left 10%;
+  background-size: 100%;
+}
+
+.c-item-box .item {
+  padding: 20px 15px;
+  font-weight: normal;
+}
+
+.c-item-box .item .item-title {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.c-item-box .item .item-topic {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.c-item-box .item p {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.c-item-box .item .item-btn {
+  display: block;
+  background-color: #ffffff;
+  width: 120px;
+  border-radius: 10px;
+  margin: 0 auto;
+  color: #707070;
+  text-align: center;
+  padding: 5px;
 }
 
 .p-body-filter {
@@ -525,57 +614,65 @@ body {
   }
 }
 
-.p-MainImg {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: column wrap;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-}
-
-.p-MainImg.index {
+.p-MainVisual-contents .MainImg.index {
   background-image: url(../img/mainvisual.jpg);
 }
 
-.p-MainImg.archive {
+.p-MainVisual-contents .MainImg.archive {
   background-image: url(../img/archive_mainvisual.jpg);
   background-position: top 50% left 40%;
   background-size: 200%;
+  /* 画像を暗く表示 */
 }
 
-/* .p-MainVisual {
-    height: 300px;
-    width: 100%;
-    background-image: url(../img/mainvisual.jpg);
-    background-position: center;
-    background-size: 100%;
-    position: relative;
-    @include breakpoint(pc) {
-        background-size: cover;
-    }
-    @include breakpoint(pc) {
-        height: 500px;
-    }
+@media (min-width: 769px) {
+  .p-MainVisual-contents .MainImg.archive {
+    background-size: 150%;
+  }
+}
 
-    .mainvisual-title {
-        display: block;
-        position: absolute;
-        top: 45%;
-        left: 5%;
-        font-size: 3.6rem;
-        color: $text-white;
-        font-weight: normal;
+.p-MainVisual-contents .MainImg.archive::before {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* どの範囲に重ねるかを指定 */
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+}
 
-        @include breakpoint(tablet) {
-            top: 45%;
-            left: 10%;
-        }
-    }
-} */
+.p-MainVisual-contents .visual-content {
+  width: 90vw;
+  margin: 0 auto;
+  color: #3C2A10;
+  padding: 40px 0 20px;
+  font-weight: normal;
+}
+
+@media (min-width: 641px) {
+  .p-MainVisual-contents .visual-content {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .p-MainVisual-contents .visual-content {
+    width: 70vw;
+  }
+}
+
+.p-MainVisual-contents .visual-content h3 {
+  font-size: 3.2rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.p-MainVisual-contents .visual-content p {
+  font-size: 1.4rem;
+}
+
 .p-Maincontents {
   height: 1320px;
   width: 100vw;

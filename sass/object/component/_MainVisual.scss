@@ -1,32 +1,45 @@
 .c-MainVisual {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: left;
     height: 300px;
     width: 100%;
-    /* background-image: url(../img/mainvisual.jpg); */
     background-position: center;
     background-size: 100%;
+    padding-left: 50px;
     position: relative;
+    z-index: -1;
+
+    @include breakpoint(tablet) {
+        flex-flow: row wrap;
+        justify-content: left;
+        align-items: center;
+        z-index: -1;
+    }
+
     @include breakpoint(pc) {
         background-size: cover;
-    }
-    @include breakpoint(pc) {
-        height: 500px;
+        height: 250px;
     }
 
     .mainvisual-title {
-        display: block;
-        position: absolute;
-        top: 45%;
-        left: 5%;
         font-size: 3.6rem;
         color: $text-white;
         font-weight: normal;
 
         @include breakpoint(tablet) {
-            top: 45%;
-            left: 10%;
+           font-size: 4.8rem;
         }
     }
     p {
-        
+        font-size: 1.4rem;
+        color: $text-white;
+
+        @include breakpoint(tablet) {
+            font-size: 1.8rem;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
     }
 }

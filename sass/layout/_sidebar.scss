@@ -28,7 +28,7 @@
         padding-top: 200px;
         padding-left: 2%;
         background-color: $bg-color2;
-        z-index: 20;
+        z-index: 20; 
 
         @include breakpoint(tablet) {
             width: 45vw;

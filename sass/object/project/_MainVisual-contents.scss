@@ -1,0 +1,55 @@
+.p-MainVisual-contents {
+    .MainImg {
+
+        &.index {
+            background-image: url(../img/mainvisual.jpg);
+        }
+    
+        &.archive {
+            background-image: url(../img/archive_mainvisual.jpg);
+            background-position: top 50% left 40%;
+            background-size: 200%;
+    
+            @include breakpoint(pc) {
+                background-size: 150%;
+            }
+            /* 画像を暗く表示 */
+            &::before {
+                background-color: rgba(0,0,0,0.3);
+                /* どの範囲に重ねるかを指定 */
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                content: ' ';
+                }
+            }
+    }
+    .visual-content {
+        width: 90vw;
+        margin: 0 auto;
+        color: $text-brown;
+        padding: 40px 0 20px;
+        font-weight: normal;
+
+        @include breakpoint(tablet) {
+            width: 80vw;
+        }
+
+        @include breakpoint(pc) {
+            width: 70vw;
+        }
+
+        h3 {
+            font-size: 3.2rem;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}
