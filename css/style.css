@@ -582,6 +582,14 @@ body {
   padding: 5px;
 }
 
+.c-item-box:not(:first-of-type) {
+  margin-bottom: 50px;
+}
+
+.c-item-box:last-of-type {
+  margin-bottom: 0px;
+}
+
 .p-body-filter {
   position: relative;
   top: 0;
