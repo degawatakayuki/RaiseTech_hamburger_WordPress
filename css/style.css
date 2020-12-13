@@ -111,6 +111,7 @@ html {
 body {
   font-family: Roboto;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 100%;
 }
 
@@ -180,7 +181,7 @@ body {
 }
 
 .header-container .searchbox {
-  width: 80%;
+  width: 82%;
   height: 38px;
   display: inline-block;
   margin: 0 auto;
@@ -193,8 +194,9 @@ body {
 
 @media (min-width: 769px) {
   .header-container .searchbox {
-    width: 40%;
+    width: 45%;
     margin: 0;
+    margin-right: 10px;
   }
 }
 
@@ -210,11 +212,12 @@ body {
   color: #808080;
   width: 25%;
   height: 100%;
-  padding: 5px 10px;
+  padding: 5px 8px;
   border-radius: 10px;
   font-size: 1.4rem;
   border: #707070 1px solid;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .header-container .searchbox .fa-search {
@@ -228,7 +231,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
 
@@ -239,11 +242,10 @@ body {
 }
 
 .l-sidebar {
-  display: none;
-  overflow: hidden;
+  /* display: none;  */
   position: absolute;
   top: 0;
-  left: 0%;
+  right: -100%;
   width: 100vw;
   /*     height: 2000px; */
   color: #707070;
@@ -253,13 +255,15 @@ body {
 
 @media (min-width: 769px) {
   .l-sidebar {
-    display: block;
-    /* height: 2200px; */
+    right: 0%;
   }
 }
 
 .l-sidebar.menu-open {
   display: block;
+  right: 0%;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .l-sidebar .slidebar-container {

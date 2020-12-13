@@ -1,9 +1,8 @@
 .l-sidebar {
-    display: none;
-    overflow: hidden;
+    /* display: none;  */
     position: absolute;
     top: 0;
-    left: 0%;
+    right: -100%;
     width: 100vw;
     
 /*     height: 2000px; */
@@ -12,12 +11,13 @@
     z-index: 1;
 
     @include breakpoint(pc) {
-        display: block;
-        /* height: 2200px; */
+        right:  0%;
     }
 
     &.menu-open {
         display: block;
+        right: 0%;
+        transition: all .2s;
     }
 
     .slidebar-container {
