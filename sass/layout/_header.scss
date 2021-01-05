@@ -15,6 +15,7 @@
 
     .header-title {
         font-size: 4.8rem;
+        height: auto;
         @include breakpoint(tablet) {
             margin-left: 30px;
         }

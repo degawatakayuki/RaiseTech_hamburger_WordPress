@@ -1,0 +1,21 @@
+.c-quotebox {
+    height: auto;
+    padding: 30px 20px;
+    background-color: $bg-quote;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+      
+
+    .blockquote {
+        flex: 1;
+        margin-bottom: 20px;
+    }
+    .quote_link {
+       height: auto;
+
+       a {
+           text-decoration: underline;
+       }
+    }
+}

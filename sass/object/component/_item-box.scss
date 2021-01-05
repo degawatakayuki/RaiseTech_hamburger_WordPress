@@ -5,33 +5,79 @@
     color: $text-white;
     font-weight: normal;
 
+    @include breakpoint(tablet) {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    @include breakpoint(pc) {
+        width: 70vw;
+    }
+
     .item-img {
         width: 100%;
         height: 230px;
         background-image: url(../img/cheeseburger.jpg);
         background-position: top 20% left 10%;
         background-size: 100%;
+
+        @include breakpoint(tablet) {
+            width: 50%;
+            height: 350px;
+            background-size: cover;
+        }
+        @include breakpoint(pc) {
+            width: 50%;
+            height: 470px;
+        }
     }
 
     .item {
         padding: 20px 15px;
         font-weight: normal;
+        display: flex;
+        flex-flow: column wrap;
+
+        @include breakpoint(tablet) {
+            width: 50%;
+        }
+        @include breakpoint(pc) {
+            padding: 25px 25px;
+        }
 
         .item-title {
            font-size: 1.6rem; 
            font-weight: normal;
            margin-bottom: 15px;
+
+            @include breakpoint(pc) {
+                font-size: 2.8rem; 
+            }
         }
 
         .item-topic {
-            font-size: 1.4rem;
+            font-size: 1.4rem ;
             font-weight: normal;
             margin-bottom: 10px;
+
+            @include breakpoint(pc) {
+                font-size: 1.8rem ;
+                margin-bottom: 15px;
+            }
         }
 
         p {
             width: 80%;
             margin-bottom: 20px;
+            flex: 1;
+
+            @include breakpoint(tablet) {
+                width: 90%;
+                margin-bottom: 30px;
+            }
+            
+            @include breakpoint(pc) {
+                font-size: 1.4rem; 
+            }
         }
 
         .item-btn {
@@ -43,12 +89,21 @@
             color: $text-maincolor;
             text-align: center;
             padding: 5px;
+            justify-self: flex-end;
+            
+            @include breakpoint(pc) {
+                width: 180px;
+                border-radius: 15px;
+                padding: 10px;
+                margin-bottom: 20px;
+                font-size: 1.5rem;
+            }
         }
     }
     &:not(:first-of-type) {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
     &:last-of-type {
-        margin-bottom: 0px;
+        /* margin-bottom: 100px;  */
     }
 }

@@ -17,12 +17,17 @@
 
     .content {
         display: block;
+        min-width: 100%;
         justify-self: end;
         background-color: $bg-white;
         color: $text-brown;
         padding: 10px;
         opacity: 0.8;
         font-weight: normal; 
+
+        @include breakpoint(tablet) {
+            padding: 5px;
+        }
 
         h3 {
             font-size: 2.2rem;

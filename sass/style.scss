@@ -1,7 +1,8 @@
+@import "foundation/_mixins";
 @import "foundation/_variables";
 @import "foundation/_reset.scss"; 
 @import "foundation/_base.scss";
-@import "foundation/_mixins";
+@import "foundation/_base-single.scss";
 @import "foundation/_utility.scss";
 
 @import "layout/_header.scss";
@@ -12,9 +13,13 @@
 @import "object/component/card";
 @import "object/component/MainVisual";
 @import "object/component/item-box";
+@import "object/component/quotebox";
 
 @import "object/project/body-filter";
 @import "object/project/MainVisual-contents";
 @import "object/project/Maincontents";
 @import "object/project/accessMap";
+@import "object/project/single-main";
+
+@import "object/utility/spacing";
 

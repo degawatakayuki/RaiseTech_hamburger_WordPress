@@ -1,6 +1,5 @@
 .p-MainVisual-contents {
     .MainImg {
-
         &.index {
             background-image: url(../img/mainvisual.jpg);
         }
@@ -8,7 +7,7 @@
         &.archive {
             background-image: url(../img/archive_mainvisual.jpg);
             background-position: top 50% left 40%;
-            background-size: 200%;
+            background-size: 200%; 
     
             @include breakpoint(pc) {
                 background-size: 150%;
@@ -24,9 +23,28 @@
                 bottom: 0;
                 left: 0;
                 content: ' ';
-                }
             }
+        }
+        &.single {
+            background-image: url(../img/single_main.jpg);
+            height: 220px;
+
+            @include breakpoint(tablet) {
+                height: 500px;
+            }
+        }
+        &.page {
+            background-image: url(../img/page_main.jpg);
+            height: 220px;
+
+            @include breakpoint(tablet) {
+                height: 500px;
+            }
+        }
     }
+
+   
+
     .visual-content {
         width: 90vw;
         margin: 0 auto;
@@ -34,22 +52,32 @@
         padding: 40px 0 20px;
         font-weight: normal;
 
-        @include breakpoint(tablet) {
-            width: 80vw;
-        }
-
         @include breakpoint(pc) {
             width: 70vw;
         }
 
-        h3 {
+        /* h2 {
             font-size: 3.2rem;
             font-weight: normal;
             margin-bottom: 20px;
-        }
+        } */
         
         p {
-            font-size: 1.4rem;
+            /* font-size: 1.4rem;
+            height: 100%;
+            margin-bottom: 30px; */
+
+            @include breakpoint(pc) {
+                margin-bottom: 20px;
+            }
         }
+
+    }
+    .pager {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        text-align: center;
     }
 }
