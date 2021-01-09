@@ -98,7 +98,11 @@
     .category-box {
         
         h3 {
-            font-size: 2em;
+            font-size: 2.4rem;
+
+            @include breakpoint(pc) {
+                font-size: 2rem;
+            }
         }
 
         ul {
@@ -107,9 +111,13 @@
         }
         
         li {
-            font-size: 1.6rem;
+            font-size: 2rem;
             line-height: 20px;
             padding: 8px;
+
+            @include breakpoint(pc) {
+                font-size: 1.6rem;
+            }
         }
     }
 }

@@ -22,26 +22,34 @@
         height: 100%;
         opacity: .5;
         color: $text-white;
-        padding: 50px;
+        padding: 25px 40px;
         font-weight: normal;
         height: 100%;
+
+        @include breakpoint(tablet) {
+            padding: 15px 20px;
+        }
+
+        @include breakpoint(pc) {
+            width: 55vw;
+        }
 
         h3 {
             font-size: 3em;
             font-weight: normal;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
 
             &::after {
                 display: block;
                 content: "";
                 width: 50px;
                 border: 1px solid;
-                margin-top: 10px;
+                
             }
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             line-height: 2;
         }
     }

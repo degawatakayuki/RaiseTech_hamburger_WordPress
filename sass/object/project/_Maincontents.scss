@@ -1,6 +1,7 @@
 .p-Maincontents {
     height: 1320px;
-    width: 100vw;
+    width: 90vw;
+    margin: 0 auto;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -8,21 +9,31 @@
 
     @include breakpoint(tablet) {
         height: 660px;
+        width: 95vw;
         flex-flow: row wrap;
         justify-content: space-around;
     }
     @include breakpoint(pc) {
-        width: 80vw;
+        width: 75vw;
         height: 1100px;
+    }
+
+    section {
+        max-width: 100%;
+
+        @include breakpoint(tablet) {
+            max-width: 45%;
+        }
     }
 
     .takeOut {
         max-width: 100%;
         background-image: url(../img/takeOut.jpg);
         margin-bottom: 10px;
+        cursor: pointer;
 
         @include breakpoint(tablet) {
-            max-width: 45%;
+            max-width: 100%;
 
             h2::after {
                 display: block;
@@ -36,9 +47,10 @@
     .eatIn {
         max-width: 100%;
         background-image: url(../img/eatin.jpg);
+        cursor: pointer;
 
         @include breakpoint(tablet) {
-            max-width: 45%;
+            max-width: 100%;
         }
         
         h2::after {

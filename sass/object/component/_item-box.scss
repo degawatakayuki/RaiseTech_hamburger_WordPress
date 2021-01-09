@@ -22,7 +22,7 @@
 
         @include breakpoint(tablet) {
             width: 50%;
-            height: 350px;
+            height: auto;
             background-size: cover;
         }
         @include breakpoint(pc) {
@@ -41,21 +41,21 @@
             width: 50%;
         }
         @include breakpoint(pc) {
-            padding: 25px 25px;
+            padding: 10px 25px;
         }
 
         .item-title {
-           font-size: 1.6rem; 
+           font-size: 2rem; 
            font-weight: normal;
            margin-bottom: 15px;
 
             @include breakpoint(pc) {
-                font-size: 2.8rem; 
+                margin-bottom: 10px;
             }
         }
 
         .item-topic {
-            font-size: 1.4rem ;
+            font-size: 1.6rem ;
             font-weight: normal;
             margin-bottom: 10px;
 
@@ -67,11 +67,13 @@
 
         p {
             width: 80%;
+            font-size: 1.6rem;
+            line-height: 1.6;
             margin-bottom: 20px;
             flex: 1;
 
             @include breakpoint(tablet) {
-                width: 90%;
+                width: 100%;
                 margin-bottom: 30px;
             }
             
@@ -84,11 +86,11 @@
             display: block;
             background-color: $bg-white;
             width: 120px;
-            border-radius: 10px;
+            border-radius: 15px;
             margin: 0 auto;
             color: $text-maincolor;
             text-align: center;
-            padding: 5px;
+            padding: 10px 5px;
             justify-self: flex-end;
             
             @include breakpoint(pc) {

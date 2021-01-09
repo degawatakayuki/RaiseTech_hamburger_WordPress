@@ -56,16 +56,16 @@
             width: 70vw;
         }
 
-        /* h2 {
-            font-size: 3.2rem;
+        h2 {
+            font-size: 2.8rem;
             font-weight: normal;
             margin-bottom: 20px;
-        } */
+        }
         
         p {
-            /* font-size: 1.4rem;
+            font-size: 1.6rem;
             height: 100%;
-            margin-bottom: 30px; */
+            margin-bottom: 30px;
 
             @include breakpoint(pc) {
                 margin-bottom: 20px;
