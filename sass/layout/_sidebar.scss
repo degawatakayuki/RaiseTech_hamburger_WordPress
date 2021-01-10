@@ -11,6 +11,7 @@
 
     @include breakpoint(pc) {
         right:  0%;
+        width: 20vw; 
     }
 
     &.menu-open {
@@ -39,7 +40,7 @@
 
         @include breakpoint(pc) {
             width: 20vw;
-            left: 80%;
+            left: 0%;
             padding-top: 0;
         }
 

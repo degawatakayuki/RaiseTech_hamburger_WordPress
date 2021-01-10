@@ -114,18 +114,6 @@ body {
   height: 100%;
 }
 
-/* 
-h2 {
-    font-size: 3.2rem;
-    font-weight: normal;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.4rem;
-    height: 100%;
-    margin-bottom: 30px;
-} */
 .single-h1 {
   font-size: 3.6rem;
   line-height: 3.6;
@@ -332,6 +320,7 @@ ol {
 @media (min-width: 769px) {
   .l-sidebar {
     right: 0%;
+    width: 20vw;
   }
 }
 
@@ -366,7 +355,7 @@ ol {
 @media (min-width: 769px) {
   .l-sidebar .slidebar-container {
     width: 20vw;
-    left: 80%;
+    left: 0%;
     padding-top: 0;
   }
 }
@@ -1352,6 +1341,6 @@ ol {
 }
 
 .u-mb-30 {
-  margin-bottom: 30px !important;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=style.css.map */
