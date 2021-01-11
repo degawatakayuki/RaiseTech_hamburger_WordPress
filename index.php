@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet"> -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>ハンバーガーショップ</title>
 </head>
@@ -13,19 +13,8 @@
     <div class="p-body-filter">
     </div>
     <div class="l-Main-container">
-         <header class="header-container">
-             <p class="header-title">Hamburger</p>
-             <button href="#" class="menu-btn">Menu</button>
-             <form class="searchbox" action="archive_search.html" method="get">
-                 <input type="text" class="search_input">
-                 <input type="submit" class="search-btn" value="検索"></input><i class="fas fa-search"></i>
-             </form>
-         </header>
-         <div class="p-MainVisual-contents">
-            <div class="c-MainVisual MainImg index">
-                <h1 class="mainvisual-title">ダミーサイト</h1>
-            </div>
-        </div>
+        <?php get_header(); ?><!-- ヘッダー読み込み -->
+        <?php get_template_part("MainVisual_contents"); ?> <!-- 'MainVisual_contents' 読み込み -->
         <div class="p-Maincontents">
             <section>
                 <a href="page.html" class="takeOut c-mainContent-card">
@@ -62,55 +51,8 @@
             </div>
          </div>
     </div>
-    <aside class="l-sidebar">
-        <div class="slidebar-container">
-            <a class="menu-btn_close"><span></span></a>
-            <h2 class="menu-title">Menu</h2>
-            <div class="category-box">
-                <section class="burger">
-                    <h3>バーガー</h3>
-                    <ul>
-                        <li><a href="page.html">ハンバーガー</a></li>
-                        <li><a href="page.html">チーズバーガー</a></li>
-                        <li><a href="page.html">テリヤキバーガー</a></li>
-                        <li><a href="page.html">アボカドバーガー</a></li>
-                        <li><a href="page.html">フィッシュバーガー</a></li>
-                        <li><a href="page.html">ベーコンバーガー</a></li>
-                        <li><a href="page.html">チキンバーガー</a></li>
-                    </ul>
-                </section>
-                <section class="sidemenu">
-                    <h3>サイド</h3>
-                    <ul>
-                        <li><a href="page.html">ポテト</a></li>
-                        <li><a href="page.html">サラダ</a></li>
-                        <li><a href="page.html">ナゲット</a></li>
-                        <li><a href="page.html">コーン</a></li>
-                    </ul>
-                </section>
-                <section class="drink">
-                    <h3>ドリンク</h3>
-                    <ul>
-                        <li><a href="page.html">コーラ</a></li>
-                        <li><a href="page.html">ファンタ</a></li>
-                        <li><a href="page.html">オレンジ</a></li>
-                        <li><a href="page.html">アップル</a></li>
-                        <li><a href="page.html">紅茶（Ice/Hot）</a></li>
-                        <li><a href="page.html">コーヒー（Ice/Hot）</a></li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-    </aside>
-    <footer>
-        <div class="footer_nav">
-            <ul>
-                <li><a href="">ショップ情報</a></li>
-                <li><a href="">ヒストリー</a></li>
-            </ul>
-            <p class="copylight">Copyright: RaiseTech</p>
-        </div>
-    </footer>
+    <?php get_sidebar(); ?><!-- サイドバー読み込み -->
+    <?php get_footer(); ?><!-- フッター読み込み -->
     <script src="./js/script.js"></script>
 </body>
 </html>
