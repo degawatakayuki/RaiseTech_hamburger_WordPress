@@ -7,4 +7,3 @@
         <p class="copylight">Copyright: RaiseTech</p>
     </div>
 </footer>
-<?php wp_footer(); ?><!-- WordPress必須関数（bodyの最後に設定） -->

@@ -7,17 +7,22 @@
     <!-- <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet"> -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>ハンバーガーショップ</title>
+    <title><?php bloginfo( 'name' ); ?></title>
+    <?php wp_head(); ?><!-- WordPress必須関数（headの最後に設定） -->
 </head>
 <body>
     <div class="p-body-filter">
     </div>
     <div class="l-Main-container">
         <?php get_header(); ?><!-- ヘッダー読み込み -->
-        <?php get_template_part("MainVisual_contents"); ?> <!-- 'MainVisual_contents' 読み込み -->
+        <div class="p-MainVisual-contents">
+            <div class="c-MainVisual MainImg index">
+                <h1 class="mainvisual-title">ダミーサイト</h1>
+            </div>
+        </div>
         <div class="p-Maincontents">
             <section>
-                <a href="page.html" class="takeOut c-mainContent-card">
+                <a href="<?php echo get_category_link(get_cat_ID('Take Out')); ?>" class="takeOut c-mainContent-card">
                     <h2>Take Out</h2>
                     <div class="content">
                         <h3>小見出しが入ります</h3>
@@ -30,7 +35,7 @@
                 </a>
             </section>
             <section>
-                <a href="archive.html" class="eatIn c-mainContent-card">
+                <a href="<?php echo get_category_link(get_cat_ID('Eat In')); ?>" class="eatIn c-mainContent-card">
                     <h2>Eat In</h2>
                     <div class="content">
                         <h3>小見出しが入ります</h3>
@@ -53,6 +58,7 @@
     </div>
     <?php get_sidebar(); ?><!-- サイドバー読み込み -->
     <?php get_footer(); ?><!-- フッター読み込み -->
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
+    <?php wp_footer(); ?><!-- WordPress必須関数（bodyの最後に設定） -->
 </body>
 </html>
