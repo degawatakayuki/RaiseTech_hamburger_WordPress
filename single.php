@@ -15,6 +15,23 @@
     </div>
     <div class="l-Main-container">
         <?php get_header(); ?><!-- ヘッダー読み込み -->
+        <div class="p-MainVisual-contents">
+            <?php if ( have_posts() ) : ?>   <!-- 投稿表示 -->
+            <?php while ( have_posts() ) : the_post(); ?>
+            <div class="c-MainVisual MainImg single">
+                <?php  my_post_thumbnail_display();  ?>
+                <h1 class="mainvisual-title single-h1"><?php the_title(); ?></h1>
+            </div>
+            <div class="p-single-edit">
+                <?php the_content(); ?>
+            </div>
+               
+            <?php endwhile;?>
+            <?php endif; ?>      <!-- 投稿表示 -->
+        </div>
+    </div>    <!-- <div class="l-Main-container">   
+    
+
          <div class="p-MainVisual-contents">
             <div class="c-MainVisual MainImg single">
                 <h1 class="mainvisual-title single-h1">h1 チーズバーガー</h1>
@@ -108,7 +125,7 @@
                 </div>
             </div> 
         </div>    
-    </div>
+    </div> -->
     <?php get_sidebar(); ?><!-- サイドバー読み込み -->
     <?php get_footer(); ?><!-- フッター読み込み -->
     <script src="./js/script.js"></script>

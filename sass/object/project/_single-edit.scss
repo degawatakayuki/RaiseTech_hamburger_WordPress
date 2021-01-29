@@ -1,0 +1,192 @@
+.p-single-edit {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 30px 0 50px 0;
+
+    @include breakpoint(tablet) {
+        height: 660px;
+        width: 95vw;
+    }
+    @include breakpoint(pc) {
+        width: 75vw;
+        height: 1100px;
+    }
+
+    &>h1 {
+        font-size: 3.6rem;
+        
+        @include breakpoint(tablet) {
+            font-size: 6rem;
+        }
+    }
+    
+    &>h2 {
+        font-size: 2.8rem;
+        line-height: 2.8;
+    
+        @include breakpoint(tablet) {
+            font-size: 3.6rem;
+            line-height: 3.6;
+        }
+    }
+
+    &>h3 {
+        font-size: 2.4rem;
+        line-height: 2.4;
+    
+        @include breakpoint(tablet) {
+            font-size: 2.8rem;
+            line-height: 2.8;
+        }
+    }
+
+    &>h4, h5, h6 {
+        font-size: 2rem;
+        line-height: 2;
+    }
+    
+    &>p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+
+    blockquote {
+        height: auto;
+        padding: 30px 20px;
+        background-color: $bg-quote;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+          
+        cite {
+            text-decoration: underline;
+        }
+    }
+    figure {
+        margin: 20px 0;
+    }
+    .size-full {
+        width: 100%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .wp-block-media-text {
+
+        @include breakpoint(tablet) {
+            margin-bottom: 25px;
+        }
+
+        @include breakpoint(pc) {
+            margin-bottom: 30px;
+        }
+
+        figure {
+            width: 100%;
+            height: auto;
+            display: block;
+            justify-self: self-start;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .wp-block-media-text__content{
+            width: 100%;
+            font-size: 1.4rem;
+            font-weight: normal;
+            @include breakpoint(tablet) {
+                font-size: 1.6rem;
+            }
+            @include breakpoint(pc) {
+                font-size: 1.8rem;
+            }
+        }  
+    }
+    .blocks-gallery-grid {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+
+        @include breakpoint(tablet) {
+            flex-flow: row wrap;
+        }
+
+        .blocks-gallery-item {
+            width: 100%;
+            @include breakpoint(tablet) {
+                max-width: 48%;
+            }
+            @include breakpoint(pc) {
+                max-width: 32%;
+            }
+        }
+        
+        li > figure {
+            height: 200px;
+            margin-bottom: 20px;
+
+        }
+    }
+
+    ul, ol {
+        font-size: 1.6rem;
+        font-weight: normal;
+        padding: 10px 15px;
+    }
+    
+    .wp-block-code {
+        font-size: 1.6rem;
+        padding: 20px;
+        text-align: left;
+        background-color: $bg-html;
+    }
+
+    .wp-block-table {
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 1.6rem;
+            font-weight: normal;
+        }
+
+        th, td {
+            border: 1px solid $border-main;
+            padding: 20px;
+        }
+
+        td:nth-child(odd) {
+            width: 40%;
+            @include breakpoint(tablet) {
+                width: 30%;
+            }
+        }
+    }
+
+    .wp-block-button {
+        width: 100%;
+        margin: 30px 0;
+        
+        font-size: 1.6rem;
+        font-weight: normal;
+        
+
+        @include breakpoint(tablet) {
+            width: 60%;
+        }
+        @include breakpoint(pc) {
+            width: 30%;
+        }
+        .wp-block-button__link {
+            width: 100%;
+            padding: 20px;
+            border-radius: 30px;
+            background-color: $bg-color2;
+            border: 1px solid $border-main;
+        }
+    }
+}
+

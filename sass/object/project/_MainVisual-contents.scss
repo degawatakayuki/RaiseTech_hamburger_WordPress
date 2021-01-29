@@ -26,12 +26,22 @@
             }
         }
         &.single {
-            background-image: url(../img/single_main.jpg);
+            height: 220px;
+            display: block;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            /* background-image: url(../img/single_main.jpg);
             height: 220px;
 
+            */
             @include breakpoint(tablet) {
                 height: 500px;
-            }
+            } 
         }
         &.page {
             background-image: url(../img/page_main.jpg);

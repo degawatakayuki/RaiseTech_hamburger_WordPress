@@ -50,7 +50,7 @@ $(function(){
     //画面の高さを取得して、変数wHに代入
     /* let wH = $(document).height(); */
     $(".p-body-filter").css("height", (wH - 48) + "px"); 
-    $(".l-sidebar").css("height", wH  + "px"); 
+    $(".l-sidebar").css("height", (wH - 16) + "px"); 
     }); 
 });
 

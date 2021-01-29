@@ -19,6 +19,15 @@
 
     add_action( 'after_setup_theme', 'custom_theme_support' );  /* テーマ初期化中に実行する。 */
 
+    //ウィジット追加
+    function my_theme_widgets_init() {
+        register_sidebar( array(
+          'name' => 'Main Sidebar',
+          'id' => 'main-sidebar',
+        ) );
+    }
+    add_action( 'widgets_init', 'my_theme_widgets_init' );
+
     /* ファイルの読み込み */
     function readScript() {
         wp_enqueue_style(  'style', get_template_directory_uri() . '/css/style.css' , array(), $theme_version ); 
@@ -31,4 +40,11 @@
     
     add_action( 'wp_enqueue_scripts', 'readScript' );
 
-?>
+    /* 自作関数読み込み */
+    $myFunctionsList = glob(dirname(__FILE__) . '/myfunctions/*.php');
+        foreach($myFunctionsList as $file) {
+        require_once ($file);
+    } 
+    			//カスタム投稿一覧を表示
+
+    ?>
