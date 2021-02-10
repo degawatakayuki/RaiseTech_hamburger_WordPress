@@ -38,7 +38,6 @@
         
         <div class="pager">
             <?php wp_pagenavi(); ?>
-            <?php the_posts_navigation(); ?>
         </div>
     </div> 
 </div>

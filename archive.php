@@ -30,8 +30,7 @@
             <?php endwhile;?>
         <?php endif; ?>
         <div class="pager"> 
-            <?php wp_pagenavi( array() ); ?>
-            <?php the_posts_navigation(); ?>
+            <?php wp_pagenavi(); ?>
         </div>
     </div> <!-- p-MainVisual-contents -->
 </div>  <!-- l-Main-container -->
