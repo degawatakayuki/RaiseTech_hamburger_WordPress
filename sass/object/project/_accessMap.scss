@@ -5,6 +5,8 @@
     width: 100%;
     overflow: hidden;
 
+
+
     @include breakpoint(tablet) {
         height: 400px;
     }
@@ -19,15 +21,15 @@
         top:0;
         left: 0;
         background-color: $bg-black;
-        height: 100%;
+        height: 70%;
         opacity: .5;
         color: $text-white;
         padding: 25px 40px;
         font-weight: normal;
-        height: 100%;
 
         @include breakpoint(tablet) {
             padding: 15px 20px;
+            height: 100%;
         }
 
         @include breakpoint(pc) {

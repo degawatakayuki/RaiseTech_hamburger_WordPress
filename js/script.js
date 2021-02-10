@@ -49,8 +49,15 @@ $(function(){
     $(document).ready(function(){ 
     //画面の高さを取得して、変数wHに代入
     /* let wH = $(document).height(); */
-    $(".p-body-filter").css("height", (wH - 48) + "px"); 
-    $(".l-sidebar").css("height", (wH - 16) + "px"); 
+    $(".p-body-filter").css("height", (wH - 50) + "px"); 
+    if (device == 'pc') {
+        $(".l-sidebar").css("height", (wH) + "px");
+        $(".p-body-filter").css("height", (wH - 32) + "px"); 
+    } else {
+        $(".l-sidebar").css("height", (wH-30) + "px"); 
+        $(".p-body-filter").css("height", (wH - 50) + "px"); 
+    }
+    /* $(".l-sidebar").css("height", (wH) + "px");  */
     }); 
 });
 

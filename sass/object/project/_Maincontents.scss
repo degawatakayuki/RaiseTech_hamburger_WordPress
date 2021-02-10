@@ -16,6 +16,7 @@
     @include breakpoint(pc) {
         width: 75vw;
         height: 1100px;
+        padding-bottom: 30px;
     }
 
     section {

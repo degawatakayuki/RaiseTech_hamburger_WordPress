@@ -10,10 +10,10 @@
         /* 管理画面から設定できるようにする設定 */
         add_theme_support( 'post-thumbnails' );     /*サムネイル追加*/
         add_theme_support( 'title-tag' );           /* タイトルタグ追加 */
-        add_theme_support( 'menus' );               /* カスタムメニュー追加 */
+       /*  add_theme_support( 'menus' );  */              /* カスタムメニュー追加 */
         register_nav_menus( array(
-            'footer_nav' => esc_html__( 'footer navigation', 'rtbread' ),
-            'category_nav' => esc_html__( 'category navigation', 'rtbread' ),
+            'footer_nav' => esc_html__( 'footer navigation', 'hamburger' ),
+            'category_nav' => esc_html__( 'category navigation', 'hamburger' ),
         ));
     }
 
@@ -31,6 +31,7 @@
     /* ファイルの読み込み */
     function readScript() {
         wp_enqueue_style(  'style', get_template_directory_uri() . '/css/style.css' , array(), $theme_version ); 
+        wp_enqueue_style(  'style', get_template_directory_uri() . '/css/pagenavi-css.css' , array(), $theme_version ); 
         wp_enqueue_style(  'fontawesome', '//use.fontawesome.com/releases/v5.6.1/css/all.css' , array(),'' ); 
         wp_enqueue_style(  'robot', '//fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap', array(), '' );
         wp_enqueue_style(  'mplus', '//fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap', array(), '' ); 
@@ -45,6 +46,5 @@
         foreach($myFunctionsList as $file) {
         require_once ($file);
     } 
-    			//カスタム投稿一覧を表示
-
-    ?>
+    		
+?>

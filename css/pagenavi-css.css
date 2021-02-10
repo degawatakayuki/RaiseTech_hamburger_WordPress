@@ -1,0 +1,76 @@
+/*
+Default style for WP-PageNavi plugin
+
+http://wordpress.org/extend/plugins/wp-pagenavi/
+*/
+
+.wp-pagenavi {
+	clear: both;
+	font-size: 2.4rem;
+	color: #707070;
+	width: 90vw;
+	/* display: flex;
+	justify-content: space-between; */
+	font-weight: normal;
+}
+
+.wp-pagenavi > .pages, .wp-pagenavi > .page, .wp-pagenavi > .current {
+	display: none;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+	text-decoration: none;
+	/* border: 1px solid #BFBFBF; */
+	padding: 3px 12px;
+	margin: 2px;
+}
+
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+	border-color: #000;
+}
+
+.wp-pagenavi span.current {
+	font-weight: normal;
+}
+.previouspostslink {
+	float: left;
+}
+.previouspostslink::after {
+	content: "<<前へ";
+}
+.nextpostslink {
+	float: right;
+}
+.nextpostslink::after {
+	content: "次へ>>";
+}
+@media screen and (min-width: 641px) {
+	.wp-pagenavi > .pages, .wp-pagenavi > .page, .wp-pagenavi > .current {
+		display: inline-block;
+		font-size: 2rem;
+	}
+
+	.page, .current {
+		border: 1px solid #BFBFBF;
+	}
+	.previouspostslink {
+		float: none;
+	}
+	.previouspostslink::after {
+		content: "<<";
+	}
+	.nextpostslink {
+		float: none;
+	}
+	.nextpostslink::after {
+		content: ">>";
+	}
+	
+}
+
+@media screen and (min-width: 769px) {
+	.wp-pagenavi {
+		width: 70vw;
+	}
+
+}

@@ -9,9 +9,19 @@
     z-index: 1;
     transition: all .2s;
 
+    .widgettitle {
+        display: none;
+    }
+
     @include breakpoint(pc) {
         right:  0%;
         width: 20vw; 
+
+        .widgettitle {
+            display: block;
+            margin-top: -100px;
+            margin-bottom: 50px;
+        }
     }
 
     &.menu-open {

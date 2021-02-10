@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/*
+Theme Name: hamburger
+Theme URL: http://localhost:10016/
+Description: ハンバーガーサイト
+Author: takayuki degawa
+Version: 1.0
+Tags: two-column
+License: takayuki degawa
+License URI: http://localhost:10016/
+Tested up to: WordPress 5.6.1
+Text Domain: hamburger
+Requires PHP: 7.3.5
+*/
+
+/* テーマチェックで追加 */
+.wp-caption,  .wp-caption-text, .sticky, .screen-reader-text, .gallery-caption, .bypostauthor, .alignright, .alignleft, .aligncenter{
+   
+}

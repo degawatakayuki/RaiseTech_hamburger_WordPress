@@ -10,6 +10,8 @@
 
     /* 文字制限の処理 */
     function my_post_str_cnt($str, $len) {
+        $str = esc_html($str);
+        $len = esc_html($len);
         if(mb_strlen($str, 'UTF-8') > $len) {
 	        $str= mb_substr($str, 0, $len, 'UTF-8');
 	        echo $str.'...';
