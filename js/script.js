@@ -3,10 +3,7 @@ let md_breakpoint = 641;
 let pc_breakpoint = 769;
 
 /* 画面サイズ取得変数 */
-/* let w = $(document).width(); */
 let wH = $(document).height();
-
-
 
 /* ハンバーガーメニュー */
 /* オープン */
@@ -26,24 +23,6 @@ $(function(){
     });
 });
 
-/* スマホ　→　タブレット　クラスを外す */
-/* $(function(){ */
-    //画面サイズ変更時に呼ばれる
-    /* $(window).resize(function(){ */
-        /* デバイス判断フラグ */
-/* let device = ''; 
-let device_flg = ''; */ 
-        /* let w = $(window).width(); */   //画面のwidthを取得
-        /* 画面サイズがタブレット以上になった場合を判定 */
-/*         if(w > md_breakpoint) {
-            if($(".l-sidebar").hasClass("menu-open")) {
-                $(".l-sidebar").removeClass("menu-open");
-                $(".p-body-filter").removeClass("filter_open");
-                $(".footer_nav").removeClass("filter_open");
-            }
-        }
-    });
-}); */
 
 $(function(){
     $(document).ready(function(){ 
@@ -57,25 +36,9 @@ $(function(){
         $(".l-sidebar").css("height", (wH-30) + "px"); 
         $(".p-body-filter").css("height", (wH - 50) + "px"); 
     }
-    /* $(".l-sidebar").css("height", (wH) + "px");  */
     }); 
 });
 
-/* スマホ　→　タブレット　クラスを外す */
-/*$(function(){
-    //画面サイズ変更時に呼ばれる
-    $(window).resize(function(){
-        let w = $(window).width();   //画面のwidthを取得
-        /* 画面サイズがタブレット以上になった場合を判定 */
-        /*if(w > md_breakpoint) {
-            if($(".l-sidebar").hasClass("menu-open")) {
-                $(".l-sidebar").removeClass("menu-open");
-                $(".p-body-filter").removeClass("filter_open");
-                $(".footer_nav").removeClass("filter_open");
-            }
-        }
-    });
-}); */
 
 $(function() {
     w = $(window).width(); 
@@ -103,12 +66,5 @@ $(function(){
             location.reload();
             /* device_flg = 'pc'; */
         }
-        /* if(device != device_flg) {
-            device = device_flg;
-            w = 0;
-            w_tmp = 0;
-            device_flg = '';
-            location.reload();
-        }  */
     });
 });

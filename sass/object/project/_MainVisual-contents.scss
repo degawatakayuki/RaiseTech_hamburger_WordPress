@@ -2,6 +2,7 @@
     .MainImg {
         &.index {
             background-image: url(../img/mainvisual.jpg);
+            background-size: auto;
         }
     
         &.archive {
@@ -35,10 +36,7 @@
                 height: 100%;
                 position: absolute;
             }
-            /* background-image: url(../img/single_main.jpg);
-            height: 220px;
 
-            */
             @include breakpoint(tablet) {
                 height: 500px;
             } 
@@ -52,8 +50,6 @@
             }
         }
     }
-
-   
 
     .visual-content {
         width: 90vw;

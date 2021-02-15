@@ -1,5 +1,4 @@
     <?php get_header(); ?><!-- ヘッダー読み込み -->
-    
     <!-- 404.php -->
     <h2>Nothing to see here</h2>
     <p>We can't find this page / 404 error/</p>

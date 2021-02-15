@@ -11,8 +11,7 @@
                     <p><?php wp_link_pages(array('before'=>'ページ：')); ?></p>
                 </div>
             <?php endwhile;?>
-        <?php endif; ?>      <!-- 投稿表示 -->
-        
+        <?php endif; ?>      <!-- 投稿表示 -->   
     </div>  <!-- p-MainVisual-contents -->
 </div>    <!-- <div class="l-Main-container">   -->
 <?php get_sidebar(); ?><!-- サイドバー読み込み -->
