@@ -10,7 +10,7 @@
         </div>
         <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
-            <div class="c-item-box">
+            <div id="post-<?php the_ID(); ?>" class="c-item-box" <?php post_class(); ?>>
                 <div class="item-img">
                     <?php my_post_thumbnail_display(); ?>   <!-- サムネイル表示自作関数 -->
                 </div>
@@ -30,7 +30,7 @@
             <?php endwhile;?>
         <?php endif; ?>
         <div class="pager"> 
-            <?php wp_pagenavi(); ?>
+            <?php wp_pagenavi(); ?>      <!-- WP-PageNaviプラグイン --> 
         </div>
     </div> <!-- p-MainVisual-contents -->
 </div>  <!-- l-Main-container -->

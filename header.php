@@ -10,7 +10,8 @@
     <title><?php esc_html(bloginfo( 'name' )); ?></title>
     <?php wp_head(); ?><!-- WordPress必須関数（headの最後に設定） -->
 </head>
-<body>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <div class="p-body-filter">
     </div>
     <div class="l-Main-container">

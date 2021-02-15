@@ -7,7 +7,6 @@
                     <h1 class="mainvisual-title single-h1"><?php the_title(); ?></h1>
                 </div>
                 <div class="p-single-edit">
-                    <p>タグ：<?php the_tags(''); ?></p>
                     <?php the_content(); ?>
                     <p><?php wp_link_pages(array('before'=>'ページ：')); ?></p>
                 </div>

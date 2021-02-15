@@ -4,7 +4,7 @@
         if (has_post_thumbnail()) {    
             the_post_thumbnail();
         } else {
-            echo '<img src="'; bloginfo('template_url'); echo '/img/nophoto.jpg" alt="サムネイルがありません。">';
+            echo '<img src="'; echo esc_url(get_template_directory_uri()); echo '/img/nophoto.jpg" alt="サムネイルがありません。">';
         }
     }
 

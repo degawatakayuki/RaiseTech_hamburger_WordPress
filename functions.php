@@ -46,5 +46,13 @@
         foreach($myFunctionsList as $file) {
         require_once ($file);
     } 
-    		
+    /* コンテンツ表示幅(テーマチェックエラーにより追加) */
+    if ( ! isset( $content_width ) ) {
+        $content_width = 600;
+    }
+    /* 待機状態のコメント返信のスクリプト(テーマチェックエラーにより追加) */
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
+    add_theme_support('automatic-feed-links')
 ?>
